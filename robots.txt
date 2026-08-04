@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO(Doug): confirm final domain before launch
+Sitemap: https://www.can2curb.ca/sitemap.xml

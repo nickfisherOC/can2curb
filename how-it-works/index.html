@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ===== SEO: HOW IT WORKS ===== -->
+  <title>How It Works | Can 2 Curb</title>
+  <meta name="description" content="See how Can 2 Curb handles your Edmonton bin day: tell us about your property, we move your bins out before collection, the City empties them, and we return them to the exact spot you chose." />
+  <link rel="canonical" href="https://www.can2curb.ca/how-it-works/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#143D32" />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Can 2 Curb" />
+  <meta property="og:title" content="How It Works | Can 2 Curb" />
+  <meta property="og:description" content="Set it once and we handle every bin day: bins out before collection, the City empties them, and bins back to your chosen spot." />
+  <meta property="og:url" content="https://www.can2curb.ca/how-it-works/" />
+  <meta property="og:image" content="https://www.can2curb.ca/assets/images/og-image.png" /><!-- TODO(Doug): add 1200x630 social image -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/assets/icons/favicon.svg" />
+
+  <!-- Fonts: preconnect + swap for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============================================================= -->
+  <!-- SECTION 1: ANNOUNCEMENT BAR                                    -->
+  <!-- ============================================================= -->
+  <div class="announce" data-announce>
+    <div class="announce__inner">
+      <p class="announce__text"><strong>Now serving Edmonton.</strong> Join the priority service list as we launch in your neighbourhood.</p>
+      <button class="announce__close" data-announce-close aria-label="Dismiss announcement">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============================================================= -->
+  <!-- SECTION 2: HEADER / NAV  (reused on every page)               -->
+  <!-- ============================================================= -->
+  <header class="site-header">
+    <nav class="nav" data-nav aria-label="Primary">
+      <div class="container nav__inner">
+        <a class="brand" href="/" aria-label="Can 2 Curb home">
+          <!-- Wordmark mark: bin rolling toward a curb, two wheels = the "2" -->
+          <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="44" height="44" rx="12" fill="#143D32"/>
+            <path d="M11 34h26" stroke="#72D572" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M14 34l1.6-13a2 2 0 0 1 2-1.8h5.8a2 2 0 0 1 2 1.8L27 34z" fill="#72D572"/>
+            <path d="M17 20.5l.4-2.2a1.4 1.4 0 0 1 1.37-1.1h3.06A1.4 1.4 0 0 1 23.2 18.3l.4 2.2" stroke="#F6F3EA" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="17.5" cy="37" r="1.7" fill="#F6F3EA"/>
+            <circle cx="23.5" cy="37" r="1.7" fill="#F6F3EA"/>
+            <path d="M30 26h7M37 26l-2.2-2M37 26l-2.2 2" stroke="#F2B84B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="brand__text">Can&nbsp;<span class="two">2</span>&nbsp;Curb</span>
+        </a>
+
+        <ul class="nav__links">
+          <li><a class="nav__link" href="/how-it-works/" aria-current="page">How It Works</a></li>
+          <li><a class="nav__link" href="/who-we-help/">Who We Help</a></li>
+          <li><a class="nav__link" href="/pricing/">Pricing</a></li>
+          <li><a class="nav__link" href="/service-areas/">Service Areas</a></li>
+          <li><a class="nav__link" href="/about/">About</a></li>
+          <li><a class="nav__link" href="/contact/">Contact</a></li>
+        </ul>
+
+        <a class="btn btn--primary btn--sm nav__cta" href="/service-areas/#check">Check My Address</a>
+
+        <button class="nav__toggle" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="nav__backdrop" data-menu-backdrop></div>
+    <div class="nav__mobile" id="mobile-menu" data-menu aria-label="Mobile">
+      <a class="nav__link" href="/how-it-works/" aria-current="page">How It Works</a>
+      <a class="nav__link" href="/who-we-help/">Who We Help</a>
+      <a class="nav__link" href="/pricing/">Pricing</a>
+      <a class="nav__link" href="/service-areas/">Service Areas</a>
+      <a class="nav__link" href="/about/">About</a>
+      <a class="nav__link" href="/contact/">Contact</a>
+      <a class="btn btn--primary btn--block" href="/service-areas/#check">Check My Address</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================= -->
+    <!-- SECTION 3: PAGE HERO                                           -->
+    <!-- ============================================================= -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">How It Works</span>
+          </nav>
+          <p class="eyebrow" data-reveal>How it works</p>
+          <h1 data-reveal data-reveal-delay="1">Set it once. We handle every bin day.</h1>
+          <p class="lead" data-reveal data-reveal-delay="2">Tell us about your property one time and Can 2 Curb takes it from there. We move your bins to the curb before Edmonton collection, the City empties them, and we return them to the exact spot you chose. No reminders, no heavy lifting, no bins left sitting out.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- SECTION 4: THE FOUR-STEP TIMELINE                             -->
+    <!-- ============================================================= -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow center" data-reveal>The round trip</p>
+          <h2 class="h2" data-reveal data-reveal-delay="1">Four simple steps, every collection day.</h2>
+          <p class="lead" data-reveal data-reveal-delay="2">Here is exactly what happens from the moment you sign up to the moment your bins are back in place.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__item" data-reveal>
+            <h3>1. Tell us about your property</h3>
+            <p>When you sign up, you share the details that let us serve you reliably: your address, your City of Edmonton collection schedule, how many bins you have and which ones we should handle, where your bins are stored between collections, and any access instructions we need &mdash; a side gate, a back lane, a long driveway, or a code to reach the yard. You set this up once and we keep it on file.</p>
+          </div>
+          <div class="timeline__item" data-reveal data-reveal-delay="1">
+            <h3>2. We move your bins out</h3>
+            <p>Before your scheduled collection, our local team moves your designated bins from their regular storage spot out to the curb, following the access instructions you gave us. If your bins live behind a gate, along a fence, or in a side yard, we bring them out from there. You do not need to be home &mdash; most customers never are.</p>
+          </div>
+          <div class="timeline__item" data-reveal data-reveal-delay="2">
+            <h3>3. The City collects</h3>
+            <p>The City of Edmonton empties the contents of your bins on their regular route, exactly as they always have. Can 2 Curb does not collect, haul, or dispose of any waste &mdash; that stays with the City. We simply make sure your bins are at the curb and ready when the collection truck arrives.</p>
+          </div>
+          <div class="timeline__item" data-reveal data-reveal-delay="3">
+            <h3>4. We return your bins</h3>
+            <p>Once the City has finished collection, we come back and return your bins to the exact spot you chose &mdash; not just inside the property line, but the place you actually keep them. You come home to a tidy property instead of empty bins stranded at the curb.</p>
+          </div>
+        </div>
+
+        <div class="placeholder-note text-center mt-lg" data-reveal style="max-width:640px;margin-inline:auto;">
+          The City of Edmonton collects the contents. <strong>Can 2 Curb handles the trip</strong> between your property and the curb.
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- SECTION 5: WHAT YOU TELL US (info the customer provides)       -->
+    <!-- ============================================================= -->
+    <section class="section section--cream">
+      <div class="container">
+        <div class="split">
+          <div class="split__copy">
+            <p class="eyebrow" data-reveal>Setting up your service</p>
+            <h2 class="h2" data-reveal data-reveal-delay="1">What we ask for &mdash; and why.</h2>
+            <p class="lead" data-reveal data-reveal-delay="2">A little detail up front means we get it right every single time. Here is what we collect when you start, and how each piece keeps your service running smoothly.</p>
+            <ul class="feature-list" data-reveal data-reveal-delay="3">
+              <li>
+                <span class="fl-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                <div><strong>Your address &amp; collection schedule</strong><p>So we visit on the right mornings and keep pace with changing Edmonton collection days.</p></div>
+              </li>
+              <li>
+                <span class="fl-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/></svg></span>
+                <div><strong>Number and type of bins</strong><p>Garbage, recycling, food scraps, and seasonal yard waste &mdash; you choose which bins we handle.</p></div>
+              </li>
+              <li>
+                <span class="fl-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M6 21V8l6-4 6 4v13M10 12h4M10 16h4"/></svg></span>
+                <div><strong>Where your bins are stored</strong><p>Beside the garage, along a fence, in a side yard &mdash; we return them to that exact spot.</p></div>
+              </li>
+              <li>
+                <span class="fl-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+                <div><strong>Access instructions</strong><p>Gate latches, side yards, back lanes, or how to reach a long driveway &mdash; whatever we need to get to your bins.</p></div>
+              </li>
+            </ul>
+          </div>
+          <div class="split__media" data-reveal data-reveal-delay="2">
+            <svg viewBox="0 0 440 400" role="img" aria-label="A stored bin behind a side gate with a route out to the curb" xmlns="http://www.w3.org/2000/svg">
+              <rect width="440" height="400" rx="22" fill="#EAF6EC"/>
+              <circle cx="360" cy="70" r="60" fill="#72D572" opacity="0.14"/>
+              <!-- house edge -->
+              <rect x="40" y="120" width="150" height="180" rx="8" fill="#FFFFFF" stroke="#DDE3DE" stroke-width="2"/>
+              <path d="M32 124l83-46 83 46z" fill="#143D32"/>
+              <rect x="70" y="180" width="40" height="40" rx="4" fill="#EAF6EC" stroke="#143D32" stroke-width="2"/>
+              <path d="M90 180v40M70 200h40" stroke="#143D32" stroke-width="2"/>
+              <!-- side gate -->
+              <g>
+                <rect x="196" y="150" width="8" height="150" rx="2" fill="#8A6B4F"/>
+                <rect x="250" y="150" width="8" height="150" rx="2" fill="#8A6B4F"/>
+                <rect x="204" y="180" width="46" height="8" fill="#A8825F"/>
+                <rect x="204" y="220" width="46" height="8" fill="#A8825F"/>
+                <rect x="204" y="260" width="46" height="8" fill="#A8825F"/>
+              </g>
+              <!-- stored bins behind gate -->
+              <g transform="translate(150 240)">
+                <rect x="0" y="0" width="34" height="46" rx="5" fill="#72D572"/><rect x="0" y="0" width="34" height="10" rx="5" fill="#4FB85B"/>
+                <rect x="-40" y="4" width="34" height="42" rx="5" fill="#4FB85B"/><rect x="-40" y="4" width="34" height="10" rx="5" fill="#3A9E48"/>
+              </g>
+              <!-- dotted route to curb -->
+              <path d="M250 300 C 300 320, 340 326, 400 330" stroke="#4FB85B" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="2 12" fill="none"/>
+              <!-- ground + curb -->
+              <path d="M0 300 Q220 285 440 300 V400 H0 Z" fill="#E4F0E4"/>
+              <rect x="330" y="326" width="110" height="9" rx="3" fill="#B9CDBD"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- SECTION 6: WHEN PLANS CHANGE                                   -->
+    <!-- ============================================================= -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow center" data-reveal>When plans change</p>
+          <h2 class="h2" data-reveal data-reveal-delay="1">Holidays and hard weather, handled with a plan.</h2>
+          <p class="lead" data-reveal data-reveal-delay="2">Edmonton bin day does not always run like clockwork. Here is how we keep your service steady when the schedule shifts or the weather turns.</p>
+        </div>
+        <div class="grid grid--2">
+          <article class="card" data-reveal>
+            <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M9 16l2 2 4-4"/></svg></div>
+            <h3>Schedule changes</h3>
+            <p>Statutory holidays can push Edmonton collection to a different day, and seasonal routines like yard-waste pickup start and stop through the year. We track these shifts so your bins still go out on the correct morning. If you know of a change to your own schedule, let us know and we will adjust your service.</p>
+            <!-- TODO(Doug): confirm how far in advance customers should report a schedule change, and how we track City holiday shifts. -->
+            <p style="margin-top:1rem;"><span class="pill pill--todo">Change notice window TBD by Doug</span></p>
+          </article>
+          <article class="card" data-reveal data-reveal-delay="1">
+            <div class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M4.9 7l2.8 2.8M2 14h4M18 7l-2.8 2.8M20 14h-4"/><path d="M8 20a4 4 0 1 1 1-7.9A5 5 0 0 1 19 14a3 3 0 0 1 0 6z"/></svg></div>
+            <h3>Severe weather</h3>
+            <p>Winter is part of life here, and winter service is a core part of what we do. During severe or genuinely unsafe conditions &mdash; think ice storms or extreme cold &mdash; we follow an operational weather policy that keeps our team and your property safe rather than pushing through dangerous conditions. We will keep you informed if a weather event affects your visit.</p>
+            <!-- TODO(Doug): confirm the operational severe-weather policy (thresholds, how customers are notified, make-up visits). Do NOT imply guaranteed service in dangerous conditions. -->
+            <p style="margin-top:1rem;"><span class="pill pill--todo">Weather policy TBD by Doug</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- SECTION 7: REPORT A PROBLEM                                    -->
+    <!-- ============================================================= -->
+    <section class="section section--evergreen">
+      <div class="container">
+        <div class="split">
+          <div class="split__copy">
+            <p class="eyebrow" data-reveal>Report a problem</p>
+            <h2 class="h2" data-reveal data-reveal-delay="1">Something not right? Reach a real person.</h2>
+            <p class="lead" data-reveal data-reveal-delay="2">If a bin was missed, returned to the wrong spot, or anything else needs sorting out, we want to hear about it. Get in touch and a member of our local team will help make it right.</p>
+            <ul class="feature-list" data-reveal data-reveal-delay="3">
+              <li>
+                <span class="fl-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H5.2L4 17.2z"/></svg></span>
+                <div><strong>Message us any time</strong><p>Send the details through our contact page and we will follow up. <span class="pill pill--todo">Response window TBD by Doug</span></p></div>
+              </li>
+              <li>
+                <span class="fl-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+                <div><strong>Prefer to call?</strong><p>Phone and business hours are being finalized for launch. <span class="pill pill--todo">Phone &amp; hours TBD by Doug</span></p></div>
+              </li>
+            </ul>
+            <!-- TODO(Doug): confirm the preferred contact method(s) for problem reports, phone number, business hours, and a target response window. -->
+            <div class="btn-row mt-lg" data-reveal>
+              <a class="btn btn--primary btn--lg" href="/contact/">Contact Us
+                <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="btn btn--on-dark btn--secondary btn--lg" href="/service-areas/#check">Check My Address</a>
+            </div>
+          </div>
+          <div class="split__media" data-reveal data-reveal-delay="2">
+            <svg viewBox="0 0 440 400" role="img" aria-label="A friendly support conversation" xmlns="http://www.w3.org/2000/svg">
+              <rect width="440" height="400" rx="22" fill="#0F2F27"/>
+              <circle cx="80" cy="80" r="50" fill="#72D572" opacity="0.14"/>
+              <!-- incoming bubble -->
+              <g>
+                <rect x="50" y="110" width="230" height="90" rx="18" fill="#18493B"/>
+                <rect x="72" y="136" width="150" height="10" rx="5" fill="#72D572" opacity="0.7"/>
+                <rect x="72" y="158" width="186" height="10" rx="5" fill="#B7CCC0" opacity="0.5"/>
+                <rect x="72" y="176" width="120" height="10" rx="5" fill="#B7CCC0" opacity="0.5"/>
+              </g>
+              <!-- reply bubble -->
+              <g>
+                <rect x="160" y="222" width="230" height="90" rx="18" fill="#72D572"/>
+                <rect x="182" y="248" width="150" height="10" rx="5" fill="#0F2F27" opacity="0.75"/>
+                <rect x="182" y="270" width="186" height="10" rx="5" fill="#143D32" opacity="0.45"/>
+                <rect x="182" y="288" width="110" height="10" rx="5" fill="#143D32" opacity="0.45"/>
+              </g>
+              <!-- checkmark badge -->
+              <g transform="translate(360 150)">
+                <circle cx="0" cy="0" r="26" fill="#F2B84B"/>
+                <path d="M-11 0l7 7 14-14" stroke="#143D32" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- SECTION 8: WHAT WE DO / DON'T DO CLARIFIER                     -->
+    <!-- ============================================================= -->
+    <section class="section section--cream">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow center" data-reveal>Just to be clear</p>
+          <h2 class="h2" data-reveal data-reveal-delay="1">A bin valet, not a waste hauler.</h2>
+          <p class="lead" data-reveal data-reveal-delay="2">People sometimes mix these up, so here is the simple version of what Can 2 Curb does and does not do.</p>
+        </div>
+        <div class="grid grid--2">
+          <article class="card" data-reveal>
+            <h3>What we do</h3>
+            <ul class="feature-list" style="margin-top:1rem;">
+              <li><span class="fl-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Move your bins to the curb</strong><p>Before your scheduled collection, following your access instructions.</p></div></li>
+              <li><span class="fl-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Return them afterward</strong><p>Back to the exact spot you chose, so nothing is left at the curb.</p></div></li>
+              <li><span class="fl-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Keep track of your schedule</strong><p>Including seasonal and holiday collection shifts across Edmonton.</p></div></li>
+            </ul>
+          </article>
+          <article class="card" data-reveal data-reveal-delay="1">
+            <h3>What the City does</h3>
+            <ul class="feature-list" style="margin-top:1rem;">
+              <li><span class="fl-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/></svg></span><div><strong>Collects and empties your bins</strong><p>The City of Edmonton runs the trucks and hauls the waste, as always.</p></div></li>
+              <li><span class="fl-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></span><div><strong>Handles disposal and recycling</strong><p>Where your garbage, recycling, and food scraps actually go is the City's job.</p></div></li>
+              <li><span class="fl-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9"/></svg></span><div><strong>Sets the collection calendar</strong><p>We follow the City's routes and timing &mdash; we do not change them.</p></div></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- SECTION 9: FINAL CTA  (verbatim from homepage)                -->
+    <!-- ============================================================= -->
+    <section class="section final-cta section--cream">
+      <div class="container">
+        <div class="final-cta__card" data-reveal>
+          <h2 class="h2">Ready to forget about bin day?</h2>
+          <p>Tell us where you live and what bins you need handled. We'll confirm availability and recommend the right service.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary btn--lg" href="/service-areas/#check">Check My Address
+              <svg class="btn__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--on-dark btn--secondary btn--lg" href="/contact/">Ask a Question</a>
+          </div>
+          <p class="final-cta__micro">Takes less than two minutes.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================= -->
+  <!-- SECTION 10: FOOTER  (reused on every page)                    -->
+  <!-- ============================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand" href="/" aria-label="Can 2 Curb home">
+            <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="2" width="44" height="44" rx="12" fill="#0F2F27"/>
+              <path d="M11 34h26" stroke="#72D572" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M14 34l1.6-13a2 2 0 0 1 2-1.8h5.8a2 2 0 0 1 2 1.8L27 34z" fill="#72D572"/>
+              <circle cx="17.5" cy="37" r="1.7" fill="#F6F3EA"/><circle cx="23.5" cy="37" r="1.7" fill="#F6F3EA"/>
+              <path d="M30 26h7M37 26l-2.2-2M37 26l-2.2 2" stroke="#F2B84B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="brand__text">Can&nbsp;<span class="two">2</span>&nbsp;Curb</span>
+          </a>
+          <p class="footer__desc">Edmonton's local bin valet service. Your bins to the curb and back, every collection day.</p>
+          <div class="footer__social">
+            <a href="#" data-fb aria-label="Can 2 Curb on Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+            <a href="#" data-ig aria-label="Can 2 Curb on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Service</h4>
+          <ul>
+            <li><a href="/how-it-works/">How It Works</a></li>
+            <li><a href="/who-we-help/">Who We Help</a></li>
+            <li><a href="/pricing/">Pricing</a></li>
+            <li><a href="/service-areas/">Service Areas</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/service-areas/#check">Check My Address</a></li>
+            <li><a href="/contact/">Get a Free Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Get in touch</h4>
+          <ul>
+            <li><a href="#" data-phone>(587) 000-0000</a> <span class="pill pill--todo">TBC</span></li>
+            <li><a href="#" data-email>hello@can2curb.ca</a></li>
+            <li>Business hours: <span class="pill pill--todo">TBD</span></li>
+            <li>Serving Edmonton, AB</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="footer__disclaimer">Can 2 Curb is an independent bin valet service. Municipal waste collection is completed by the City of Edmonton.</p>
+
+      <div class="footer__bottom">
+        <p>&copy; <span data-year>2026</span> Can 2 Curb. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
