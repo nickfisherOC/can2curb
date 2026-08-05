@@ -46,7 +46,20 @@ window.CAN2CURB = {
     initHeroMotion();
     initForms();
     injectContactDetails();
+    initServicePrefill();
   });
+
+  /* -------- Preselect the contact "Service needed" dropdown from ?plan= / ?service= --------
+     e.g. /contact/?plan=curbside-clean lands with that service already chosen. */
+  function initServicePrefill() {
+    var select = document.getElementById("c-service");
+    if (!select) return;
+    var params = new URLSearchParams(window.location.search);
+    var wanted = params.get("plan") || params.get("service");
+    if (!wanted) return;
+    var hasMatch = Array.prototype.some.call(select.options, function (o) { return o.value === wanted; });
+    if (hasMatch) select.value = wanted;
+  }
 
   /* -------- Auto-updating copyright year -------- */
   function initYear() {
