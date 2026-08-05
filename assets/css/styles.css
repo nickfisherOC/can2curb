@@ -872,6 +872,31 @@ table.compare tr:last-child td, table.compare tr:last-child th { border-bottom: 
 .float-card--2 { top: 44%; right: -6%; }
 .float-card--3 { bottom: 6%; left: 6%; }
 
+/* Photos / media frames */
+figure.media { margin: 0; }
+figure.media figcaption { margin-top: 0.55rem; font-size: 0.8125rem; color: var(--text-muted); }
+.media-photo {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--grey);
+}
+.media-photo--tall { aspect-ratio: 3 / 4; }
+.media-photo--wide { aspect-ratio: 16 / 10; }
+.hero__photo {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 5 / 4;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  background: var(--grey);
+}
+
 /* --------------------------------------------------------------------------
    17. FEATURE / SPLIT SECTIONS
    -------------------------------------------------------------------------- */
