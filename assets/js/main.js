@@ -27,7 +27,17 @@ window.CAN2CURB = {
      Netlify Forms: instead add `data-netlify="true"` to the <form> and keep
      formMode "live" with formEndpoint = "" (Netlify intercepts the POST). */
   formEndpoint: "",                       // TODO(Doug): e.g. https://formspree.io/f/xxxx
-  formMode: "demo"                        // "demo" | "live"
+  formMode: "demo",                       // "demo" | "live"
+
+  /* Stripe Payment Links — hosted checkout URLs. No secret keys live here; these
+     are public links, safe to expose. Buttons with data-checkout="<key>" get
+     pointed at the matching URL below.
+     TODO(Doug): these are Stripe TEST links — replace with the LIVE links before launch. */
+  checkout: {
+    "curbside":       "https://buy.stripe.com/test_14A7sE8HNgO1aLz6sO08g02", // Curbside — $49/mo
+    "curbside-clean": "https://buy.stripe.com/test_5kQ6oAf6b0P3f1P5oK08g01", // Curbside + Clean — $69/mo
+    "excess":         "https://buy.stripe.com/test_cNi7sE8HN41ff1P18u08g00"  // Excess Trash Removal — one-time
+  }
 };
 
 (function () {
@@ -47,7 +57,19 @@ window.CAN2CURB = {
     initForms();
     injectContactDetails();
     initServicePrefill();
+    initCheckoutLinks();
   });
+
+  /* -------- Point checkout buttons at their Stripe Payment Link --------
+     Buttons keep a /contact/ fallback href so they still work if JS is off;
+     with JS on, they upgrade to the hosted Stripe checkout URL from the config. */
+  function initCheckoutLinks() {
+    var links = C2C.checkout || {};
+    document.querySelectorAll("[data-checkout]").forEach(function (el) {
+      var url = links[el.getAttribute("data-checkout")];
+      if (url) el.setAttribute("href", url);
+    });
+  }
 
   /* -------- Preselect the contact "Service needed" dropdown from ?plan= / ?service= --------
      e.g. /contact/?plan=curbside-clean lands with that service already chosen. */
