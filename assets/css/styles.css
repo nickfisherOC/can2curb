@@ -890,6 +890,10 @@ figure.media figcaption { margin-top: 0.55rem; font-size: 0.8125rem; color: var(
 }
 .media-photo--tall { aspect-ratio: 3 / 4; }
 .media-photo--wide { aspect-ratio: 16 / 10; }
+/* Third-party platform logo tiles (e.g. Airbnb / Vrbo host section) */
+.logo-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.logo-tiles img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow); }
+.logo-tiles__note { grid-column: 1 / -1; text-align: center; font-size: 0.8125rem; color: var(--text-muted); margin-top: 0.25rem; }
 .hero__photo {
   width: 100%;
   display: block;
