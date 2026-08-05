@@ -64,7 +64,7 @@
       { "@type": "Question", "name": "Can you help with long or steep driveways?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — long, steep, or awkward driveways are exactly what Can 2 Curb is built for. Share the details when you sign up so we're prepared." } },
       { "@type": "Question", "name": "Do you operate during Edmonton winters?", "acceptedAnswer": { "@type": "Answer", "text": "Winter service is a core part of what we do. During severe or unsafe weather we follow an operational weather policy so everyone stays safe." } },
       { "@type": "Question", "name": "Can you service Airbnbs and rental properties?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We keep bins managed between guest stays so you don't have to drive across the city." } },
-      { "@type": "Question", "name": "Can you manage several properties?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our Multi-Property option is designed for property managers coordinating bin service across several Edmonton addresses from one account." } },
+      { "@type": "Question", "name": "Can you manage several properties?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Property managers and operators can get a custom plan coordinating bin service across several Edmonton addresses from one account. Contact us for a quote." } },
       { "@type": "Question", "name": "Which Edmonton neighbourhoods do you serve?", "acceptedAnswer": { "@type": "Answer", "text": "We're expanding across Edmonton neighbourhoods. Enter your address on our Service Areas page and we'll confirm availability where you live." } },
       { "@type": "Question", "name": "How do I get started?", "acceptedAnswer": { "@type": "Answer", "text": "Start by checking your address or requesting a free quote. We'll confirm availability and recommend the right plan. It takes less than two minutes." } }
     ]
@@ -368,67 +368,59 @@
     <!-- ============================================================= -->
     <!-- SECTION 9: SERVICE OPTIONS  (PRICES ARE PLACEHOLDERS)         -->
     <!-- ============================================================= -->
-    <!-- TODO(Doug): All prices below are PLACEHOLDERS ($XX). Do not treat as final.
-         Confirm amounts, bin limits, and which optional features are offered. -->
+    <!-- Prices confirmed by owner. Full detail + comparison table on /pricing/.
+         TODO(Doug): confirm GST/tax handling and collection days covered per month. -->
     <section class="section section--cream" id="plans">
       <div class="container">
         <div class="section-head center">
           <p class="eyebrow center" data-reveal>Service options</p>
-          <h2 class="h2" data-reveal data-reveal-delay="1">Simple plans for every kind of property.</h2>
-          <p class="lead" data-reveal data-reveal-delay="2">Pricing shown is a placeholder while we finalize launch rates. <span class="pill pill--todo">Prices TBC</span></p>
+          <h2 class="h2" data-reveal data-reveal-delay="1">Simple monthly plans, plus one-off help.</h2>
+          <p class="lead" data-reveal data-reveal-delay="2">Two recurring plans and a one-time option for the extra that won't fit. Prices in Canadian dollars.</p>
         </div>
         <div class="price-grid">
-          <!-- PLAN 1: HOME -->
+          <!-- CURBSIDE — $49/month -->
           <div class="price-card" data-reveal>
-            <div class="price-card__name">Home</div>
-            <p class="price-card__desc">Simple recurring service for a single household.</p>
-            <div class="price-card__price"><span class="price-card__amount">$XX</span><span class="price-card__period">/month</span></div>
-            <p class="price-card__ph">Placeholder — starting price TBC</p>
+            <div class="price-card__name">Curbside</div>
+            <p class="price-card__desc">Your bins to the curb before collection, and back the next day.</p>
+            <div class="price-card__price"><span class="price-card__amount">$49</span><span class="price-card__period">/month</span></div>
             <ul>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>One Edmonton property</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Up to a set number of bins</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Bins moved out before collection</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Bins returned after collection</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Recurring scheduled service</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Simple access instructions</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Bins to the curb before collection</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Bins returned the next day</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Recurring, scheduled service</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Garbage, recycling &amp; food-scraps bins</li>
             </ul>
-            <a class="btn btn--secondary btn--block" href="/contact/?plan=home">Join the Home Plan</a>
+            <a class="btn btn--secondary btn--block" href="/contact/?plan=curbside">Get Started</a>
           </div>
 
-          <!-- PLAN 2: PROPERTY PLUS (featured) -->
+          <!-- CURBSIDE + CLEAN — $69/month (featured) -->
           <div class="price-card price-card--featured" data-reveal data-reveal-delay="1">
-            <div class="price-card__name">Property Plus</div>
-            <p class="price-card__desc">For Airbnbs, group homes, and properties needing extra coordination.</p>
-            <div class="price-card__price"><span class="price-card__amount">Custom</span><span class="price-card__period"> monthly</span></div>
-            <p class="price-card__ph">Placeholder — pricing built to your property</p>
+            <div class="price-card__name">Curbside + Clean</div>
+            <p class="price-card__desc">Everything in Curbside, plus a fresh, sanitised bin every month.</p>
+            <div class="price-card__price"><span class="price-card__amount">$69</span><span class="price-card__period">/month</span></div>
             <ul>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Additional bins or collection days</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Detailed placement instructions</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Flexible property access</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Priority customer support</li>
-              <!-- TODO(Doug): only keep the next line if you actually offer service confirmations. -->
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Optional service confirmations <span class="pill pill--todo">if offered</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Everything in the Curbside plan</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Full bin clean &amp; sanitise once a month</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Helps cut odours and grime</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Recurring, scheduled service</li>
             </ul>
-            <a class="btn btn--primary btn--block" href="/contact/?plan=property-plus">Request a Quote</a>
+            <a class="btn btn--primary btn--block" href="/contact/?plan=curbside-clean">Get Started</a>
           </div>
 
-          <!-- PLAN 3: MULTI-PROPERTY -->
+          <!-- EXCESS TRASH REMOVAL — from $80, one-time -->
           <div class="price-card" data-reveal data-reveal-delay="2">
-            <div class="price-card__name">Multi-Property</div>
-            <p class="price-card__desc">For property managers and operators handling several addresses.</p>
-            <div class="price-card__price"><span class="price-card__amount" style="font-size:1.6rem;">Let's build your plan</span></div>
-            <p class="price-card__ph">Placeholder — volume pricing TBC</p>
+            <div class="price-card__name">Excess Trash Removal</div>
+            <p class="price-card__desc">A one-off haul-away for the extra that won't fit your bins.</p>
+            <div class="price-card__price"><span class="price-card__period">From </span><span class="price-card__amount">$80</span></div>
+            <p class="price-card__ph">One-time &middot; final price confirmed before we haul</p>
             <ul>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Multiple Edmonton properties</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Centralized account coordination</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Custom scheduling</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Volume pricing</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Dedicated point of contact</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>One-time service &mdash; no subscription</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>We haul away excess bags &amp; items</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Book it whenever you need it</li>
             </ul>
-            <a class="btn btn--secondary btn--block" href="/contact/?plan=multi-property">Talk to Our Team</a>
+            <a class="btn btn--secondary btn--block" href="/contact/?plan=excess-removal">Request a Pickup</a>
           </div>
         </div>
-        <p class="text-center mt-lg"><a class="link-arrow" href="/pricing/">See the full pricing page <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+        <p class="text-center mt-lg"><a class="link-arrow" href="/pricing/">See full pricing &amp; comparison <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
       </div>
     </section>
 
@@ -595,7 +587,7 @@
           <!-- Q10 -->
           <div class="faq__item">
             <h3><button class="faq__trigger" data-faq-trigger aria-expanded="false" aria-controls="faq10"><span>Can you manage several properties?</span><span class="faq__icon" aria-hidden="true"></span></button></h3>
-            <div class="faq__panel" id="faq10" role="region"><div class="faq__panel-inner"><p>Absolutely. Our Multi-Property option is designed for property managers and operators coordinating bin service across several Edmonton addresses from one account.</p></div></div>
+            <div class="faq__panel" id="faq10" role="region"><div class="faq__panel-inner"><p>Absolutely. Property managers and operators can get a custom plan that coordinates bin service across several Edmonton addresses from one account &mdash; <a class="link-arrow" href="/contact/?plan=custom">contact us for a quote</a>.</p></div></div>
           </div>
           <!-- Q11 -->
           <div class="faq__item">

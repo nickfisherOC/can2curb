@@ -77,7 +77,7 @@ The `:root { … }` design tokens at the top of **`assets/css/styles.css`**. Cha
 ### Pricing
 - Homepage plan cards: **`index.html`** → “SECTION 9: SERVICE OPTIONS”.
 - Full pricing page + comparison table: **`pricing/index.html`**.
-- Every price is a **placeholder** written as `$XX` and flagged with a `TBC`/`TBD` pill and a `<!-- TODO(Doug) -->` comment. Search for `$XX` to find them all.
+- Plans and prices are **owner-confirmed**: Curbside **$49/mo**, Curbside + Clean **$69/mo**, and one-off Excess Trash Removal **from $80**. Multi-property/commercial is a no-price "custom quote" band. Remaining pricing TODOs are operational (GST/tax handling, what the monthly clean includes, excess-removal limits) — search `TODO(Doug)`.
 
 ### Service areas / neighbourhoods
 **`service-areas/index.html`** — the coverage groups are `<details class="area-group">` blocks with **example** neighbourhoods marked as *requiring confirmation*. The address checker is a **lead form**, not a live map lookup.
@@ -130,10 +130,11 @@ Everything below is currently a **clearly-marked placeholder** in the code. Sear
 - [ ] Team photos (About)
 
 **Service & pricing**
-- [ ] Final prices for Home / Property Plus / Multi-Property (all `$XX` now)
-- [ ] Bin count limits per plan
-- [ ] Whether a one-time / seasonal yard-waste service is offered, and how it's booked
-- [ ] Whether “service confirmations” are offered (Property Plus)
+- [x] ~~Plan prices~~ — confirmed: Curbside $49/mo, Curbside + Clean $69/mo, Excess Trash Removal from $80
+- [ ] GST/tax handling on the prices, and billing cycle / accepted payment methods
+- [ ] What the monthly bin clean & sanitise includes (interior/exterior, process, products)
+- [ ] Excess Trash Removal scope — accepted items, volume/weight limits, disposal fees, coverage
+- [ ] How many collection days per month each recurring plan covers
 - [ ] Confirmed serviced neighbourhoods / coverage boundaries
 - [ ] Whether coverage extends beyond Edmonton city limits
 
