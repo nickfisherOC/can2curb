@@ -420,8 +420,9 @@ p { text-wrap: pretty; }
 }
 .brand__text .two { color: var(--green-600); }
 /* Real logo image in the header (transparent PNG, dark art — for light backgrounds) */
-.brand__logo { height: 42px; width: auto; display: block; }
-.nav.is-scrolled .brand__logo { height: 36px; transition: height var(--t); }
+.brand__logo { height: 40px; width: auto; max-width: 220px; display: block; }
+.nav.is-scrolled .brand__logo { height: 34px; transition: height var(--t); }
+.footer .brand__logo--footer { height: 46px; max-width: 240px; }
 
 .nav__links { display: flex; align-items: center; gap: 0.25rem; }
 .nav__link {
