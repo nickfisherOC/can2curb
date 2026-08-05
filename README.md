@@ -105,7 +105,8 @@ Forms currently run in **demo mode**: validation, spam honeypot, loading, error,
 - `robots.txt` and `sitemap.xml` at the root (update the domain in both).
 - `LocalBusiness` JSON-LD on the homepage; `FAQPage` JSON-LD mirrors the visible FAQ.
 - **No fake ratings/AggregateRating** — do not add review schema until you have real, verifiable reviews.
-- **TODO:** add a `1200×630` social share image at `assets/images/og-image.png` (referenced by the OG tags).
+- The `1200×630` social share image (`assets/images/og-image.png`) is generated from the logo on a cream background. Swap it for a custom share card anytime.
+- **Logo:** the header uses `assets/images/logo.png` (a trimmed, transparent version of `can2curb logo.png`). It's dark artwork, so the dark‑green footer keeps the white SVG wordmark. For a logo on the footer, add a white/reversed version.
 
 ---
 
@@ -151,7 +152,8 @@ Everything below is currently a **clearly-marked placeholder** in the code. Sear
 
 **Content to add when available**
 - [ ] Real customer testimonials (with written permission) — homepage currently shows benefit statements in the testimonial slots, **not fabricated quotes**
-- [ ] `assets/images/og-image.png` social share image + any real photography
+- [x] ~~Logo~~ — added to the header; ~~`og-image.png` social share image~~ — generated from the logo (both can be refined later)
+- [ ] Optional: a white/reversed logo for the dark footer, and any real photography
 
 ---
 

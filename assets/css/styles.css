@@ -419,6 +419,9 @@ p { text-wrap: pretty; }
   white-space: nowrap;
 }
 .brand__text .two { color: var(--green-600); }
+/* Real logo image in the header (transparent PNG, dark art — for light backgrounds) */
+.brand__logo { height: 42px; width: auto; display: block; }
+.nav.is-scrolled .brand__logo { height: 36px; transition: height var(--t); }
 
 .nav__links { display: flex; align-items: center; gap: 0.25rem; }
 .nav__link {
@@ -1143,6 +1146,7 @@ figure.media figcaption { margin-top: 0.55rem; font-size: 0.8125rem; color: var(
   .footer__top { grid-template-columns: 1fr; }
   .float-card { font-size: 0.75rem; padding: 0.55rem 0.75rem; }
   .float-card--2 { display: none; }
+  .brand__logo { height: 34px; }
   .btn-row .btn { width: 100%; }
   .hero .btn-row .btn { width: 100%; }
 }
