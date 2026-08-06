@@ -133,7 +133,7 @@ Everything below is currently a **clearly-marked placeholder** in the code. Sear
 **Service & pricing**
 - [x] ~~Plan prices~~ — confirmed: Curbside $49/mo, Curbside + Clean $69/mo, Excess Trash Removal from $80
 - [ ] GST/tax handling on the prices, and billing cycle / accepted payment methods
-- [ ] What the monthly bin clean & sanitise includes (interior/exterior, process, products)
+- [ ] What the monthly bin clean & sanitize includes (interior/exterior, process, products)
 - [ ] Excess Trash Removal scope — accepted items, volume/weight limits, disposal fees, coverage
 - [ ] How many collection days per month each recurring plan covers
 - [ ] Confirmed serviced neighbourhoods / coverage boundaries
