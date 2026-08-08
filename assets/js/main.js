@@ -51,7 +51,56 @@ window.CAN2CURB = {
     initForms();
     injectContactDetails();
     initServicePrefill();
+    initModals();
   });
+
+  /* -------- Accessible modal dialogs (e.g. the referral form) -------- */
+  function initModals() {
+    var lastFocused = null;
+
+    function openModal(modal, opener) {
+      lastFocused = opener || document.activeElement;
+      modal.hidden = false;
+      void modal.offsetWidth; // force reflow so the open transition runs reliably
+      modal.classList.add("is-open");
+      document.body.classList.add("menu-open"); // reuse scroll lock
+      var focusable = modal.querySelector("input, textarea, select, button, a[href]");
+      if (focusable) focusable.focus();
+    }
+    function closeModal(modal) {
+      modal.classList.remove("is-open");
+      document.body.classList.remove("menu-open");
+      var finish = function () { modal.hidden = true; };
+      reduceMotion ? finish() : setTimeout(finish, 240);
+      if (lastFocused && lastFocused.focus) lastFocused.focus();
+    }
+
+    document.querySelectorAll("[data-modal-open]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var modal = document.getElementById(btn.getAttribute("data-modal-open"));
+        if (modal) openModal(modal, btn);
+      });
+    });
+
+    document.querySelectorAll("[data-modal]").forEach(function (modal) {
+      modal.querySelectorAll("[data-modal-close]").forEach(function (c) {
+        c.addEventListener("click", function () { closeModal(modal); });
+      });
+      // Keep focus inside the open dialog
+      modal.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") { closeModal(modal); return; }
+        if (e.key !== "Tab") return;
+        var items = Array.prototype.filter.call(
+          modal.querySelectorAll('a[href], button:not([disabled]), input, textarea, select'),
+          function (el) { return el.offsetParent !== null; }
+        );
+        if (!items.length) return;
+        var first = items[0], last = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      });
+    });
+  }
 
   /* -------- Preselect the contact "Service needed" dropdown from ?plan= / ?service= --------
      e.g. /contact/?plan=curbside-clean lands with that service already chosen. */
