@@ -919,6 +919,10 @@ figure.media figcaption { margin-top: 0.55rem; font-size: 0.8125rem; color: var(
 }
 .feature-list strong { display: block; font-family: var(--font-heading); color: var(--evergreen); font-size: 1.0625rem; }
 .feature-list p { color: var(--text-muted); font-size: 0.9375rem; margin-top: 0.15rem; }
+/* On the dark evergreen section: centre text with the icon and brighten it for legibility */
+.section--evergreen .feature-list li { align-items: center; }
+.section--evergreen .feature-list strong { color: var(--white); }
+.section--evergreen .feature-list p { color: #C6D6CE; }
 
 /* Problem chips */
 .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }

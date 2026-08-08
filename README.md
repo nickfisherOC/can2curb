@@ -140,7 +140,7 @@ Everything below is currently a **clearly-marked placeholder** in the code. Sear
 - [ ] Whether coverage extends beyond Edmonton city limits
 
 **Policies (do not publish guesses)**
-- [ ] Severe-weather / winter operations policy
+- [x] ~~Severe-weather stance~~ — set per owner: winter service runs as standard; Terms keeps a brief safety clause for genuinely dangerous conditions (extreme cold / major ice storm). Optional: define exact thresholds & customer notification if you want them spelled out.
 - [ ] Pause & cancellation terms, notice periods, refunds/credits
 - [ ] How customers report schedule changes and problems; target response time
 - [ ] Insurance and staff background-check / vetting policy (only assert once true)
