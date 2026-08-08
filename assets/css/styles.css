@@ -947,6 +947,8 @@ figure.media figcaption { margin-top: 0.55rem; font-size: 0.8125rem; color: var(
   color: var(--text-muted); position: relative; overflow: hidden;
 }
 .owner__sig { font-family: 'Manrope', cursive; font-weight: 800; font-size: 1.75rem; color: var(--evergreen); font-style: italic; }
+.owner__copy p + p { margin-top: 1rem; }
+.owner__copy p.lead + p { margin-top: 1.25rem; }
 
 .benefit-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
 .benefit-card {
