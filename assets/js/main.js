@@ -12,8 +12,8 @@
 window.CAN2CURB = {
   businessName: "Can 2 Curb",
   domain: "https://www.can2curb.ca",      // TODO(Doug): confirm final domain
-  phone: "(587) 000-0000",                // TODO(Doug): real phone number
-  email: "hello@can2curb.ca",             // TODO(Doug): real email
+  phone: "(587) 545-0586",                // Doug's number
+  email: "dougbystrom@yahoo.ca",          // Doug's email
   serviceArea: "Edmonton, Alberta",
   social: {
     facebook: "#",                        // TODO(Doug): Facebook page URL
