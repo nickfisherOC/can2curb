@@ -433,6 +433,7 @@ p { text-wrap: pretty; }
   padding: 0.6rem 0.85rem;
   border-radius: var(--radius-sm);
   position: relative;
+  white-space: nowrap; /* keep each label on one line so nav items never wrap/jumble */
   transition: background var(--t), color var(--t);
 }
 .nav__link:hover { background: rgba(20,61,50,0.06); }
