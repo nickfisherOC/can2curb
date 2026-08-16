@@ -123,6 +123,11 @@
               <form class="form" data-form novalidate>
                 <div data-form-fields>
                   <div class="field">
+                    <label for="ac-first">First name <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="ac-first" name="first_name" type="text" required autocomplete="given-name" />
+                    <p class="field__error" aria-live="polite"></p>
+                  </div>
+                  <div class="field">
                     <label for="ac-street">Street address <span class="req" aria-hidden="true">*</span></label>
                     <input class="input" id="ac-street" name="street" type="text" required autocomplete="street-address" />
                     <p class="field__error" aria-live="polite"></p>
