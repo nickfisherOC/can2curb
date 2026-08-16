@@ -133,8 +133,8 @@
                     <p class="field__error" aria-live="polite"></p>
                   </div>
                   <div class="field">
-                    <label for="ac-hood">Neighbourhood</label>
-                    <input class="input" id="ac-hood" name="neighbourhood" type="text" />
+                    <label for="ac-hood">Neighbourhood <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="ac-hood" name="neighbourhood" type="text" required />
                     <p class="field__error" aria-live="polite"></p>
                   </div>
                   <div class="form__row form__row--2">
@@ -144,16 +144,16 @@
                       <p class="field__error" aria-live="polite"></p>
                     </div>
                     <div class="field">
-                      <label for="ac-type">Property type</label>
-                      <select class="select" id="ac-type" name="property_type">
+                      <label for="ac-type">Property type <span class="req" aria-hidden="true">*</span></label>
+                      <select class="select" id="ac-type" name="property_type" required>
                         <option value="">Select…</option><option>Single-family home</option><option>Townhouse</option><option>Duplex</option><option>Condo / apartment</option><option>Airbnb / short-term rental</option><option>Group home</option><option>Multiple properties</option>
                       </select>
                       <p class="field__error" aria-live="polite"></p>
                     </div>
                   </div>
                   <div class="field">
-                    <label for="ac-bins">Number of bins</label>
-                    <select class="select" id="ac-bins" name="bins"><option value="">Select…</option><option>1</option><option>2</option><option>3</option><option>4+</option></select>
+                    <label for="ac-bins">Number of bins <span class="req" aria-hidden="true">*</span></label>
+                    <select class="select" id="ac-bins" name="bins" required><option value="">Select…</option><option>1</option><option>2</option><option>3</option><option>4+</option></select>
                     <p class="field__error" aria-live="polite"></p>
                   </div>
                   <div class="field">
