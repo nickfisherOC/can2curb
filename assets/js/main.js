@@ -11,7 +11,7 @@
    └───────────────────────────────────────────────────────────────────────┘ */
 window.CAN2CURB = {
   businessName: "Can 2 Curb",
-  domain: "https://www.can2curb.ca",      // TODO(Doug): confirm final domain
+  domain: "https://can2curb.ca",      // live domain
   phone: "(587) 545-0586",                // Doug's number
   email: "dougbystrom@yahoo.ca",          // Doug's email
   serviceArea: "Edmonton, Alberta",
