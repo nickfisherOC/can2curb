@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="/assets/css/styles.css?v=4" />
+  <link rel="stylesheet" href="/assets/css/styles.css?v=5" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -117,35 +117,22 @@
               <h2 class="h2" style="font-size:var(--fs-h3);margin-bottom:0.35rem;">Request a quote or ask a question</h2>
               <p class="lead" style="font-size:var(--fs-body);margin-bottom:1.5rem;">Fields marked with <span class="req" aria-hidden="true">*</span> are required. The more you can share, the faster we can help.</p>
 
-              <!-- DEMO MODE: this form is not yet connected to a live endpoint.
-                   main.js runs it in "demo" mode and shows the success state without sending.
-                   To go live, Doug sets formEndpoint + formMode "live" in /assets/js/main.js. -->
-              <form class="form" data-form novalidate>
+              <!-- Submits to Growtheon (LeadRescue) via main.js. Each field's data-gt is the
+                   Growtheon field ID; the form is tagged with data-growtheon-form (its form ID).
+                   The publishable key + endpoint live in the CAN2CURB.growtheon config in main.js. -->
+              <form class="form" data-form data-growtheon-form="66ac1bc5-ea60-4c94-86b0-e5260d215da8" novalidate>
                 <div data-form-fields>
                   <div class="form__row form__row--2">
-                    <div class="field"><label for="c-name">Full name <span class="req" aria-hidden="true">*</span></label><input class="input" id="c-name" name="name" type="text" required autocomplete="name" /><p class="field__error" aria-live="polite"></p></div>
-                    <div class="field"><label for="c-email">Email <span class="req" aria-hidden="true">*</span></label><input class="input" id="c-email" name="email" type="email" required autocomplete="email" /><p class="field__error" aria-live="polite"></p></div>
+                    <div class="field"><label for="c-name">Full name <span class="req" aria-hidden="true">*</span></label><input class="input" id="c-name" name="name" type="text" required autocomplete="name" data-gt="full-name-field_1787070412759_f7xbzr" /><p class="field__error" aria-live="polite"></p></div>
+                    <div class="field"><label for="c-email">Email <span class="req" aria-hidden="true">*</span></label><input class="input" id="c-email" name="email" type="email" required autocomplete="email" data-gt="email-field_1786976969620_j38epc" /><p class="field__error" aria-live="polite"></p></div>
                   </div>
                   <div class="form__row form__row--2">
-                    <div class="field"><label for="c-phone">Phone</label><input class="input" id="c-phone" name="phone" type="tel" autocomplete="tel" /><p class="field__error" aria-live="polite"></p></div>
-                    <div class="field"><label for="c-address">Service address</label><input class="input" id="c-address" name="address" type="text" autocomplete="street-address" /><p class="field__error" aria-live="polite"></p></div>
+                    <div class="field"><label for="c-phone">Phone number</label><input class="input" id="c-phone" name="phone" type="tel" autocomplete="tel" data-gt="phone-field_1787070567818_c7mxn2" /><p class="field__error" aria-live="polite"></p></div>
+                    <div class="field"><label for="c-ptype">Property type</label><select class="select" id="c-ptype" name="property_type" data-gt="select-field_1786976735512_5mmm2n"><option value="">Select…</option><option value="option1">Single-family home</option><option value="option2">Townhouse</option><option value="option3">Duplex</option><option value="option4">Condo / apartment</option><option value="option5">Airbnb / short-term rental</option><option value="option6">Group home</option><option value="option7">Multiple properties</option></select><p class="field__error" aria-live="polite"></p></div>
                   </div>
-                  <div class="form__row form__row--2">
-                    <div class="field"><label for="c-ptype">Property type</label><select class="select" id="c-ptype" name="property_type"><option value="">Select…</option><option>Single-family home</option><option>Townhouse</option><option>Duplex</option><option>Condo / apartment</option><option>Airbnb / short-term rental</option><option>Group home</option><option>Multiple properties</option></select><p class="field__error" aria-live="polite"></p></div>
-                    <div class="field"><label for="c-bins">Number of bins</label><select class="select" id="c-bins" name="bins"><option value="">Select…</option><option>1</option><option>2</option><option>3</option><option>4+</option></select><p class="field__error" aria-live="polite"></p></div>
-                  </div>
-                  <div class="form__row form__row--2">
-                    <div class="field"><label for="c-day">Collection day (if known)</label><input class="input" id="c-day" name="collection_day" type="text" placeholder="e.g. Tuesday" /><p class="field__error" aria-live="polite"></p></div>
-                    <div class="field"><label for="c-service">Service needed</label><select class="select" id="c-service" name="service"><option value="">Select…</option><option value="general">General inquiry</option><option value="curbside">Curbside plan ($49/mo)</option><option value="curbside-clean">Curbside + Clean ($69/mo &mdash; includes monthly bin cleaning)</option><option value="excess-removal">Excess trash removal (one-off, from $80)</option><option value="custom">Multiple properties / commercial quote</option><option value="group-home">Group-home inquiry</option></select><p class="field__error" aria-live="polite"></p></div>
-                  </div>
-                  <div class="field"><label for="c-access">Access considerations</label><input class="input" id="c-access" name="access" type="text" placeholder="Gate code, side yard, long driveway…" /><p class="field__error" aria-live="polite"></p></div>
-                  <div class="field"><label for="c-referrer">Were you referred by someone? <span class="hint">(their name)</span></label><input class="input" id="c-referrer" name="referred_by" type="text" placeholder="Name of who referred you" /><p class="field__error" aria-live="polite"></p></div>
-                  <div class="field"><label for="c-message">Message</label><textarea class="textarea" id="c-message" name="message"></textarea><p class="field__error" aria-live="polite"></p></div>
+                  <div class="field"><label for="c-bins">Number of bins</label><select class="select" id="c-bins" name="bins" data-gt="select-field_1786976930928_vlhx33"><option value="">Select…</option><option value="option1">1</option><option value="option2">2</option><option value="option3">3</option><option value="option4">4+</option></select><p class="field__error" aria-live="polite"></p></div>
+                  <div class="field"><label for="c-message">Message</label><textarea class="textarea" id="c-message" name="message" data-gt="textarea-field_1787072563394_5tkkvl"></textarea><p class="field__error" aria-live="polite"></p></div>
                   <div class="hp-field" aria-hidden="true"><label>Leave blank<input type="text" tabindex="-1" autocomplete="off" name="company_hp" data-honeypot /></label></div>
-                  <div class="field">
-                    <div class="checkbox"><input type="checkbox" id="c-consent" name="consent" required /><label for="c-consent">I agree to be contacted by Can 2 Curb about my request. <span class="req" aria-hidden="true">*</span></label></div>
-                    <p class="field__error" aria-live="polite"></p>
-                  </div>
                   <div class="form-status form-status--error" data-form-error hidden tabindex="-1" role="alert"><strong>Please fix the following:</strong><ul data-form-error-list></ul></div>
                   <button class="btn btn--primary btn--lg btn--block" type="submit"><span class="btn__label">Send Message</span><svg class="btn__spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9" stroke-linecap="round"/></svg></button>
                   <p class="text-center" style="font-size:0.8125rem;color:var(--text-muted);margin-top:0.85rem;">We'll reply by email or phone.</p>
@@ -283,6 +270,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js?v=4" defer></script>
+  <script src="/assets/js/main.js?v=5" defer></script>
 </body>
 </html>

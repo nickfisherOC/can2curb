@@ -27,7 +27,16 @@ window.CAN2CURB = {
      Netlify Forms: instead add `data-netlify="true"` to the <form> and keep
      formMode "live" with formEndpoint = "" (Netlify intercepts the POST). */
   formEndpoint: "",                       // TODO(Doug): e.g. https://formspree.io/f/xxxx
-  formMode: "demo"                        // "demo" | "live"
+  formMode: "demo",                       // "demo" | "live" (fallback for forms without a Growtheon config)
+
+  /* Growtheon (LeadRescue) lead submission. Any <form data-growtheon-form="<formId>">
+     posts here on submit, building { formId, data } where data maps each field's
+     data-gt attribute -> its value. The key below is a PUBLISHABLE (anon) key —
+     safe to expose in the browser. Not a secret. */
+  growtheon: {
+    endpoint: "https://auth.growtheon.co/functions/v1/handle-form-submission",
+    key: "sb_publishable_enLE5YM6C8teak0PBuPBHA_yxTm1MXO"
+  }
 
   /* Stripe Payment Links live directly in the button hrefs on the pricing page
      and homepage (search the HTML for "buy.stripe.com"). They are Stripe TEST links.
@@ -289,6 +298,7 @@ window.CAN2CURB = {
     var successBox = form.querySelector("[data-form-success]");
     var submitBtn = form.querySelector("[type=submit]");
     var honeypot = form.querySelector("[data-honeypot]");
+    var formStart = Date.now();
 
     // Live-clear errors as the user fixes fields
     form.querySelectorAll("input, select, textarea").forEach(function (field) {
@@ -311,6 +321,14 @@ window.CAN2CURB = {
 
       // Submit
       setLoading(true);
+
+      // Growtheon (LeadRescue) integration — used when the form carries data-growtheon-form.
+      var gtFormId = form.getAttribute("data-growtheon-form");
+      if (gtFormId && C2C.growtheon && C2C.growtheon.endpoint) {
+        submitToGrowtheon(gtFormId, formStart);
+        return;
+      }
+
       if (C2C.formMode === "live" && C2C.formEndpoint) {
         var data = new FormData(form);
         fetch(C2C.formEndpoint, { method: "POST", body: data, headers: { Accept: "application/json" } })
@@ -405,6 +423,41 @@ window.CAN2CURB = {
       submitBtn.classList.toggle("is-loading", on);
       submitBtn.setAttribute("aria-busy", String(on));
       submitBtn.disabled = on;
+    }
+
+    function submitToGrowtheon(formId, startedAt) {
+      var data = {};
+      form.querySelectorAll("[data-gt]").forEach(function (el) {
+        data[el.getAttribute("data-gt")] = (el.value || "").trim();
+      });
+      var payload = {
+        formId: formId,
+        data: data,
+        deviceType: window.matchMedia("(max-width: 768px)").matches ? "mobile" : "desktop",
+        pageUrl: location.href,
+        referrer: document.referrer,
+        completionTimeSeconds: Math.round((Date.now() - startedAt) / 1000)
+      };
+      fetch(C2C.growtheon.endpoint, {
+        method: "POST",
+        headers: {
+          "apikey": C2C.growtheon.key,
+          "authorization": "Bearer " + C2C.growtheon.key,
+          "content-type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      })
+        .then(function (res) {
+          return res.json().catch(function () { return {}; }).then(function (j) { return { ok: res.ok, j: j }; });
+        })
+        .then(function (r) {
+          if (!(r.ok && r.j && r.j.success)) throw new Error((r.j && r.j.message) || "Submission failed");
+          showSuccess();
+        })
+        .catch(function () {
+          setLoading(false);
+          showErrorSummary([{ msg: "Sorry — we couldn't send your message just now. Please try again, or email us." }]);
+        });
     }
 
     function showSuccess() {
