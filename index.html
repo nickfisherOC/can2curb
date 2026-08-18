@@ -724,18 +724,16 @@
       <h2 id="ref-modal-title">Refer a neighbour</h2>
       <p style="color:var(--text-muted);margin-top:0.4rem;">Share their details and we'll reach out. You'll get $5 off once they become a paying customer.</p>
 
-      <!-- DEMO MODE: uses the same form system as the contact form (no live endpoint yet).
-           TODO(Doug): connect to Growtheon by setting formEndpoint + formMode "live" in /assets/js/main.js. -->
-      <form class="form" data-form novalidate style="margin-top:1.35rem;">
+      <!-- Submits to the Growtheon "Referral" form via main.js (data-gt keys -> field IDs). -->
+      <form class="form" data-form data-growtheon-form="476df813-d4d7-4069-81ae-78c9f75c634a" novalidate style="margin-top:1.35rem;">
         <div data-form-fields>
-          <input type="hidden" name="form_type" value="referral" />
           <div class="form__row form__row--2">
-            <div class="field"><label for="r-name">Your full name <span class="req" aria-hidden="true">*</span></label><input class="input" id="r-name" name="referrer_name" type="text" required autocomplete="name" /><p class="field__error" aria-live="polite"></p></div>
-            <div class="field"><label for="r-contact">Your phone number <span class="req" aria-hidden="true">*</span></label><input class="input" id="r-contact" name="referrer_phone" type="tel" required autocomplete="tel" /><p class="field__error" aria-live="polite"></p></div>
+            <div class="field"><label for="r-name">Your full name <span class="req" aria-hidden="true">*</span></label><input class="input" id="r-name" name="referrer_name" type="text" required autocomplete="name" data-gt="full-name-field_1787087403059_rins30" /><p class="field__error" aria-live="polite"></p></div>
+            <div class="field"><label for="r-contact">Your phone number <span class="req" aria-hidden="true">*</span></label><input class="input" id="r-contact" name="referrer_phone" type="tel" required autocomplete="tel" data-gt="phone-field_1787087432045_oor47s" /><p class="field__error" aria-live="polite"></p></div>
           </div>
           <div class="form__row form__row--2">
-            <div class="field"><label for="r-ref-name">Referral's full name <span class="req" aria-hidden="true">*</span></label><input class="input" id="r-ref-name" name="referral_name" type="text" required /><p class="field__error" aria-live="polite"></p></div>
-            <div class="field"><label for="r-ref-contact">Referral's phone number <span class="req" aria-hidden="true">*</span></label><input class="input" id="r-ref-contact" name="referral_phone" type="tel" required autocomplete="off" /><p class="field__error" aria-live="polite"></p></div>
+            <div class="field"><label for="r-ref-name">Referral's full name <span class="req" aria-hidden="true">*</span></label><input class="input" id="r-ref-name" name="referral_name" type="text" required data-gt="full-name-field_1787087454482_5z5vlr" /><p class="field__error" aria-live="polite"></p></div>
+            <div class="field"><label for="r-ref-contact">Referral's phone number <span class="req" aria-hidden="true">*</span></label><input class="input" id="r-ref-contact" name="referral_phone" type="tel" required autocomplete="off" data-gt="phone-field_1787087505446_gdwwc9" /><p class="field__error" aria-live="polite"></p></div>
           </div>
           <div class="hp-field" aria-hidden="true"><label>Leave blank<input type="text" tabindex="-1" autocomplete="off" name="company_hp" data-honeypot /></label></div>
           <div class="form-status form-status--error" data-form-error hidden tabindex="-1" role="alert"><strong>Please fix the following:</strong><ul data-form-error-list></ul></div>
