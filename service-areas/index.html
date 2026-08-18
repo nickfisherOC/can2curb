@@ -120,45 +120,56 @@
                  Every submission is reviewed by hand and confirmed by email. Wire up a true
                  boundary/postal-code lookup once real coverage data is available. -->
             <div class="card" data-reveal data-reveal-delay="2" style="margin-top:1.5rem;">
-              <form class="form" data-form novalidate>
+              <!-- Submits to Growtheon (LeadRescue) via main.js. data-gt keys map to the
+                   Growtheon "Check my address" form field IDs; form is tagged data-growtheon-form. -->
+              <form class="form" data-form data-growtheon-form="980bc265-b072-4700-90e3-dbb56af105d2" novalidate>
                 <div data-form-fields>
-                  <div class="field">
-                    <label for="ac-first">First name <span class="req" aria-hidden="true">*</span></label>
-                    <input class="input" id="ac-first" name="first_name" type="text" required autocomplete="given-name" />
-                    <p class="field__error" aria-live="polite"></p>
+                  <div class="form__row form__row--2">
+                    <div class="field">
+                      <label for="ac-name">Full name <span class="req" aria-hidden="true">*</span></label>
+                      <input class="input" id="ac-name" name="name" type="text" required autocomplete="name" data-gt="full-name-field_1787070412759_f7xbzr" />
+                      <p class="field__error" aria-live="polite"></p>
+                    </div>
+                    <div class="field">
+                      <label for="ac-email">Email <span class="req" aria-hidden="true">*</span></label>
+                      <input class="input" id="ac-email" name="email" type="email" required autocomplete="email" data-gt="email-field_1786976969620_j38epc" />
+                      <p class="field__error" aria-live="polite"></p>
+                    </div>
                   </div>
                   <div class="field">
                     <label for="ac-street">Street address <span class="req" aria-hidden="true">*</span></label>
-                    <input class="input" id="ac-street" name="street" type="text" required autocomplete="street-address" />
-                    <p class="field__error" aria-live="polite"></p>
-                  </div>
-                  <div class="field">
-                    <label for="ac-hood">Neighbourhood <span class="req" aria-hidden="true">*</span></label>
-                    <input class="input" id="ac-hood" name="neighbourhood" type="text" required />
+                    <input class="input" id="ac-street" name="street" type="text" required autocomplete="street-address" data-gt="address-field_1787076292743_35p9js" />
                     <p class="field__error" aria-live="polite"></p>
                   </div>
                   <div class="form__row form__row--2">
                     <div class="field">
                       <label for="ac-postal">Postal code <span class="req" aria-hidden="true">*</span></label>
-                      <input class="input" id="ac-postal" name="postal" type="text" required autocomplete="postal-code" />
+                      <input class="input" id="ac-postal" name="postal" type="text" required autocomplete="postal-code" data-gt="zipcode-field_1787076299100_9gbqcl" />
                       <p class="field__error" aria-live="polite"></p>
                     </div>
                     <div class="field">
+                      <label for="ac-phone">Phone number <span class="req" aria-hidden="true">*</span></label>
+                      <input class="input" id="ac-phone" name="phone" type="tel" required autocomplete="tel" data-gt="phone-field_1787070567818_c7mxn2" />
+                      <p class="field__error" aria-live="polite"></p>
+                    </div>
+                  </div>
+                  <div class="form__row form__row--2">
+                    <div class="field">
                       <label for="ac-type">Property type <span class="req" aria-hidden="true">*</span></label>
-                      <select class="select" id="ac-type" name="property_type" required>
-                        <option value="">Select…</option><option>Single-family home</option><option>Townhouse</option><option>Duplex</option><option>Condo / apartment</option><option>Airbnb / short-term rental</option><option>Group home</option><option>Multiple properties</option>
+                      <select class="select" id="ac-type" name="property_type" required data-gt="select-field_1786976735512_5mmm2n">
+                        <option value="">Select…</option><option value="option1">Single-family home</option><option value="option2">Townhouse</option><option value="option3">Duplex</option><option value="option4">Condo / apartment</option><option value="option5">Airbnb / short-term rental</option><option value="option6">Group home</option><option value="option7">Multiple properties</option>
                       </select>
+                      <p class="field__error" aria-live="polite"></p>
+                    </div>
+                    <div class="field">
+                      <label for="ac-bins">Number of bins <span class="req" aria-hidden="true">*</span></label>
+                      <select class="select" id="ac-bins" name="bins" required data-gt="select-field_1786976930928_vlhx33"><option value="">Select…</option><option value="option1">1</option><option value="option2">2</option><option value="option3">3</option><option value="option4">4+</option></select>
                       <p class="field__error" aria-live="polite"></p>
                     </div>
                   </div>
                   <div class="field">
-                    <label for="ac-bins">Number of bins <span class="req" aria-hidden="true">*</span></label>
-                    <select class="select" id="ac-bins" name="bins" required><option value="">Select…</option><option>1</option><option>2</option><option>3</option><option>4+</option></select>
-                    <p class="field__error" aria-live="polite"></p>
-                  </div>
-                  <div class="field">
-                    <label for="ac-email">Email <span class="req" aria-hidden="true">*</span></label>
-                    <input class="input" id="ac-email" name="email" type="email" required autocomplete="email" />
+                    <label for="ac-message">Message</label>
+                    <textarea class="textarea" id="ac-message" name="message" data-gt="textarea-field_1787072563394_5tkkvl"></textarea>
                     <p class="field__error" aria-live="polite"></p>
                   </div>
                   <!-- honeypot: leave exactly as-is -->
